@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CarListScreen.swift
 //  CarFinder
 //
 //  Created by Ashok Chikkam on 9/7/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CarListScreen: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		31AE0C3A26E7E7E900FF9F3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C3926E7E7E800FF9F3E /* AppDelegate.swift */; };
 		31AE0C3C26E7E7E900FF9F3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C3B26E7E7E900FF9F3E /* SceneDelegate.swift */; };
-		31AE0C3E26E7E7E900FF9F3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C3D26E7E7E900FF9F3E /* ViewController.swift */; };
+		31AE0C3E26E7E7E900FF9F3E /* CarListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C3D26E7E7E900FF9F3E /* CarListScreen.swift */; };
 		31AE0C4126E7E7E900FF9F3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE0C3F26E7E7E900FF9F3E /* Main.storyboard */; };
 		31AE0C4326E7E7EB00FF9F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AE0C4226E7E7EB00FF9F3E /* Assets.xcassets */; };
 		31AE0C4626E7E7EB00FF9F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE0C4426E7E7EB00FF9F3E /* LaunchScreen.storyboard */; };
+		31AE0C5326E7EBD500FF9F3E /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5226E7EBD500FF9F3E /* CarCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		31AE0C3626E7E7E800FF9F3E /* CarFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31AE0C3926E7E7E800FF9F3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31AE0C3B26E7E7E900FF9F3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		31AE0C3D26E7E7E900FF9F3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		31AE0C3D26E7E7E900FF9F3E /* CarListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListScreen.swift; sourceTree = "<group>"; };
 		31AE0C4026E7E7E900FF9F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31AE0C4226E7E7EB00FF9F3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		31AE0C4526E7E7EB00FF9F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31AE0C4726E7E7EB00FF9F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		31AE0C5226E7EBD500FF9F3E /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		31AE0C3826E7E7E800FF9F3E /* CarFinder */ = {
 			isa = PBXGroup;
 			children = (
+				31AE0C5026E7E90900FF9F3E /* ViewModel */,
+				31AE0C4F26E7E90300FF9F3E /* View */,
+				31AE0C4E26E7E8FD00FF9F3E /* Model */,
 				31AE0C3926E7E7E800FF9F3E /* AppDelegate.swift */,
 				31AE0C3B26E7E7E900FF9F3E /* SceneDelegate.swift */,
-				31AE0C3D26E7E7E900FF9F3E /* ViewController.swift */,
 				31AE0C3F26E7E7E900FF9F3E /* Main.storyboard */,
 				31AE0C4226E7E7EB00FF9F3E /* Assets.xcassets */,
 				31AE0C4426E7E7EB00FF9F3E /* LaunchScreen.storyboard */,
 				31AE0C4726E7E7EB00FF9F3E /* Info.plist */,
 			);
 			path = CarFinder;
+			sourceTree = "<group>";
+		};
+		31AE0C4E26E7E8FD00FF9F3E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		31AE0C4F26E7E90300FF9F3E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31AE0C3D26E7E7E900FF9F3E /* CarListScreen.swift */,
+				31AE0C5226E7EBD500FF9F3E /* CarCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31AE0C5026E7E90900FF9F3E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31AE0C3E26E7E7E900FF9F3E /* ViewController.swift in Sources */,
+				31AE0C3E26E7E7E900FF9F3E /* CarListScreen.swift in Sources */,
 				31AE0C3A26E7E7E900FF9F3E /* AppDelegate.swift in Sources */,
+				31AE0C5326E7EBD500FF9F3E /* CarCell.swift in Sources */,
 				31AE0C3C26E7E7E900FF9F3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
