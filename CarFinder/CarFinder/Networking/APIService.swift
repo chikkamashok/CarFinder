@@ -11,7 +11,7 @@ class APIService {
     
     private var dataTask: URLSessionDataTask?
     
-    func getCarsAvailable() {
+    func getCarsAvailable(completion: @escaping (Result<CarData, Error>) -> Void) {
         
         let fetchUrl = "https://carfax-for-consumers.firebaseio.com/assignment.json"
         guard let url = URL(string: fetchUrl) else { return }
@@ -19,6 +19,7 @@ class APIService {
         dataTask = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let error = error {
+                completion(.failure(error))
                 print("error: \(error)")
                 return
             }
@@ -31,8 +32,13 @@ class APIService {
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(CarData.self, from: data)
                 print(jsonData)
+                
+                // Back to the main thread
+                DispatchQueue.main.async {
+                    completion(.success(jsonData))
+                }
             } catch {
-                print(error)
+                completion(.failure(error))
             }
         }
         dataTask?.resume()
