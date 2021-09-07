@@ -16,6 +16,7 @@
 		31AE0C5326E7EBD500FF9F3E /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5226E7EBD500FF9F3E /* CarCell.swift */; };
 		31AE0C5B26E7EDCA00FF9F3E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5A26E7EDCA00FF9F3E /* APIService.swift */; };
 		31AE0C5F26E7EF9F00FF9F3E /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5E26E7EF9F00FF9F3E /* CarData.swift */; };
+		31AE0C6226E7FC0500FF9F3E /* CarListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C6126E7FC0500FF9F3E /* CarListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		31AE0C5226E7EBD500FF9F3E /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
 		31AE0C5A26E7EDCA00FF9F3E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		31AE0C5E26E7EF9F00FF9F3E /* CarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
+		31AE0C6126E7FC0500FF9F3E /* CarListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		31AE0C5026E7E90900FF9F3E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				31AE0C6126E7FC0500FF9F3E /* CarListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AE0C6226E7FC0500FF9F3E /* CarListViewModel.swift in Sources */,
 				31AE0C3E26E7E7E900FF9F3E /* CarListScreen.swift in Sources */,
 				31AE0C5B26E7EDCA00FF9F3E /* APIService.swift in Sources */,
 				31AE0C5F26E7EF9F00FF9F3E /* CarData.swift in Sources */,
