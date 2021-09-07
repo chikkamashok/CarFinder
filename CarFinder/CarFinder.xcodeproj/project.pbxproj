@@ -14,6 +14,8 @@
 		31AE0C4326E7E7EB00FF9F3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31AE0C4226E7E7EB00FF9F3E /* Assets.xcassets */; };
 		31AE0C4626E7E7EB00FF9F3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31AE0C4426E7E7EB00FF9F3E /* LaunchScreen.storyboard */; };
 		31AE0C5326E7EBD500FF9F3E /* CarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5226E7EBD500FF9F3E /* CarCell.swift */; };
+		31AE0C5B26E7EDCA00FF9F3E /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5A26E7EDCA00FF9F3E /* APIService.swift */; };
+		31AE0C5F26E7EF9F00FF9F3E /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31AE0C5E26E7EF9F00FF9F3E /* CarData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		31AE0C4526E7E7EB00FF9F3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31AE0C4726E7E7EB00FF9F3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31AE0C5226E7EBD500FF9F3E /* CarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarCell.swift; sourceTree = "<group>"; };
+		31AE0C5A26E7EDCA00FF9F3E /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		31AE0C5E26E7EF9F00FF9F3E /* CarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		31AE0C3826E7E7E800FF9F3E /* CarFinder */ = {
 			isa = PBXGroup;
 			children = (
+				31AE0C5626E7ED6D00FF9F3E /* Networking */,
 				31AE0C5026E7E90900FF9F3E /* ViewModel */,
 				31AE0C4F26E7E90300FF9F3E /* View */,
 				31AE0C4E26E7E8FD00FF9F3E /* Model */,
@@ -74,6 +79,7 @@
 		31AE0C4E26E7E8FD00FF9F3E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				31AE0C5E26E7EF9F00FF9F3E /* CarData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -92,6 +98,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		31AE0C5626E7ED6D00FF9F3E /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				31AE0C5A26E7EDCA00FF9F3E /* APIService.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				31AE0C3E26E7E7E900FF9F3E /* CarListScreen.swift in Sources */,
+				31AE0C5B26E7EDCA00FF9F3E /* APIService.swift in Sources */,
+				31AE0C5F26E7EF9F00FF9F3E /* CarData.swift in Sources */,
 				31AE0C3A26E7E7E900FF9F3E /* AppDelegate.swift in Sources */,
 				31AE0C5326E7EBD500FF9F3E /* CarCell.swift in Sources */,
 				31AE0C3C26E7E7E900FF9F3E /* SceneDelegate.swift in Sources */,
