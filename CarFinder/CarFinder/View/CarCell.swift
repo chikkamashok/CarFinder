@@ -19,7 +19,7 @@ class CarCell: UITableViewCell {
     func updateCellWith(_ listing: CarListing) {
         
         self.carModelDetails.text = getCarModelDetails(listing)
-        self.carPriceDetails.text = getCarPriceDetails(listing)
+        self.carPriceDetails.attributedText = getCarPriceDetails(listing)
         self.carDealerContact.setTitle(listing.dealer?.phone, for: .normal)
         guard let urlString = listing.images?.small.first, let imageUrl = URL(string: urlString) else {
             self.carImageView.image = UIImage(named: "noImageAvailable")
@@ -68,13 +68,54 @@ extension CarCell {
         return year + " " + make + " " + model
     }
     
-    private func getCarPriceDetails(_ listing: CarListing) -> String {
+    private func getCarPriceDetails(_ listing: CarListing) -> NSMutableAttributedString {
         
         let price = "$" + ((listing.currentPrice != nil) ? String(Int(listing.currentPrice!)) : "")
-        let mileage = (listing.mileage != nil) ? String(listing.mileage!) : ""
+        
+        let mileage = (listing.mileage != nil) ? getFormattedMileage(listing.mileage!) : ""
         let city = listing.dealer?.city ?? ""
         let state = listing.dealer?.state ?? ""
         let location = city + ", " + state
-        return price + " | " + mileage + " | " + location
+        let normalText = "  |  " + mileage + "  |  " + location
+        
+        return NSMutableAttributedString()
+            .bold(price)
+            .normal(normalText)
+    }
+    
+    private func getFormattedMileage(_ mileage: Int) -> String {
+        
+        if mileage > 1000 {
+            return String(Int(mileage/1000)) + "k Mi"
+        } else {
+            return String(Int(mileage)) + " Mi"
+        }
+    }
+    
+}
+
+extension NSMutableAttributedString {
+    var fontSize:CGFloat { return 14 }
+    var boldFont:UIFont { return UIFont(name: "AvenirNext-Bold", size: fontSize) ?? UIFont.boldSystemFont(ofSize: fontSize) }
+    var normalFont:UIFont { return UIFont(name: "AvenirNext-Regular", size: fontSize) ?? UIFont.systemFont(ofSize: fontSize)}
+    
+    func bold(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : boldFont
+        ]
+        
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
+    }
+    
+    func normal(_ value:String) -> NSMutableAttributedString {
+        
+        let attributes:[NSAttributedString.Key : Any] = [
+            .font : normalFont,
+        ]
+        
+        self.append(NSAttributedString(string: value, attributes:attributes))
+        return self
     }
 }
