@@ -25,7 +25,7 @@ class CarCell: UITableViewCell {
             self.carImageView.image = UIImage(named: "noImageAvailable")
             return
         }
-//        self.carImageView.image = nil
+        self.carImageView.image = nil
         getImageDataFrom(url: imageUrl)
     }
     
@@ -49,6 +49,8 @@ class CarCell: UITableViewCell {
                 if let image = UIImage(data: data), image.size.height > 10.0 {
                     print(image.size.height)
                     self.carImageView.image = image
+                } else {
+                    self.carImageView.image = UIImage(named: "noImageAvailable")
                 }
             }
         }.resume()
