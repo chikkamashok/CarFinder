@@ -72,7 +72,8 @@ extension CarCell {
         let year = (listing.year != nil) ? String(listing.year!) : ""
         let make = listing.make ?? ""
         let model = listing.model ?? ""
-        return year + " " + make + " " + model
+        let trim = listing.trim ?? ""
+        return year + " " + make + " " + model + " " + trim
     }
     
     private func getCarPriceDetails(_ listing: CarListing) -> NSMutableAttributedString {
