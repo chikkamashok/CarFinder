@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="exA-3f-Fof">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -23,14 +23,15 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-sJ-jMv">
-                                            <rect key="frame" x="20" y="19" width="374" height="320"/>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImageAvailable" translatesAutoresizingMaskIntoConstraints="NO" id="pvS-sJ-jMv">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="320"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="320" id="Fj0-4F-x8t"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKx-RF-RpI">
-                                            <rect key="frame" x="32" y="351" width="362" height="25"/>
+                                            <rect key="frame" x="32" y="332" width="362" height="25"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="25" id="3nG-Yn-gDV"/>
                                             </constraints>
@@ -39,7 +40,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TFC-Nl-mcE">
-                                            <rect key="frame" x="32" y="384" width="362" height="21"/>
+                                            <rect key="frame" x="32" y="365" width="362" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="yWt-LX-UTo"/>
                                             </constraints>
@@ -48,20 +49,21 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RrA-q3-jGW">
-                                            <rect key="frame" x="184" y="429" width="46" height="52"/>
+                                            <rect key="frame" x="184" y="398" width="46" height="83"/>
                                             <state key="normal" title="Button"/>
                                         </button>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="TFC-Nl-mcE" firstAttribute="leading" secondItem="cKx-RF-RpI" secondAttribute="leading" id="1gg-rd-FPK"/>
-                                        <constraint firstItem="pvS-sJ-jMv" firstAttribute="top" secondItem="P5Z-Gi-72p" secondAttribute="topMargin" constant="8" id="Grl-7I-mFb"/>
+                                        <constraint firstAttribute="trailing" secondItem="pvS-sJ-jMv" secondAttribute="trailing" id="3kO-HK-cN3"/>
+                                        <constraint firstItem="pvS-sJ-jMv" firstAttribute="leading" secondItem="P5Z-Gi-72p" secondAttribute="leading" id="NSa-2O-x98"/>
                                         <constraint firstItem="cKx-RF-RpI" firstAttribute="leading" secondItem="P5Z-Gi-72p" secondAttribute="leadingMargin" constant="12" id="Old-Bj-IEc"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="pvS-sJ-jMv" secondAttribute="trailing" id="UQG-TX-dbT"/>
                                         <constraint firstItem="RrA-q3-jGW" firstAttribute="centerX" secondItem="P5Z-Gi-72p" secondAttribute="centerX" id="YwM-26-V6Z"/>
                                         <constraint firstItem="cKx-RF-RpI" firstAttribute="top" secondItem="pvS-sJ-jMv" secondAttribute="bottom" constant="12" id="g6o-qR-yOG"/>
-                                        <constraint firstItem="pvS-sJ-jMv" firstAttribute="leading" secondItem="P5Z-Gi-72p" secondAttribute="leadingMargin" id="hkS-aG-0oi"/>
                                         <constraint firstItem="TFC-Nl-mcE" firstAttribute="top" secondItem="cKx-RF-RpI" secondAttribute="bottom" constant="8" id="ieJ-by-x5P"/>
-                                        <constraint firstItem="RrA-q3-jGW" firstAttribute="top" secondItem="TFC-Nl-mcE" secondAttribute="bottom" constant="24" id="jKf-Ik-Vp5"/>
+                                        <constraint firstItem="RrA-q3-jGW" firstAttribute="top" secondItem="TFC-Nl-mcE" secondAttribute="bottom" constant="12" id="jKf-Ik-Vp5"/>
+                                        <constraint firstItem="pvS-sJ-jMv" firstAttribute="top" secondItem="P5Z-Gi-72p" secondAttribute="top" id="lWO-Fd-qHD"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="RrA-q3-jGW" secondAttribute="bottom" constant="8" id="oiY-YP-A0h"/>
                                         <constraint firstItem="TFC-Nl-mcE" firstAttribute="trailing" secondItem="cKx-RF-RpI" secondAttribute="trailing" id="uG5-PH-SSe"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="cKx-RF-RpI" secondAttribute="trailing" id="wsO-1J-ZW2"/>
@@ -87,6 +89,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="noImageAvailable" width="184.5" height="231"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
