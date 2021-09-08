@@ -35,6 +35,16 @@ extension CarListScreen {
         
         let carListing = viewModel.cellForRowAt(indexPath: indexPath)
         cell.updateCellWith(carListing)
+        cell.callDelegate = self
         return cell
+    }
+}
+
+extension CarListScreen: CarCellDelegate {
+    func didTappedDealerContact(_ contact: String?) {
+        guard let contact = contact else { return }
+        if let url = URL(string: "tel://" + contact) {
+            UIApplication.shared.open(url)
+        }
     }
 }

@@ -15,9 +15,16 @@ class CarCell: UITableViewCell {
     @IBOutlet weak var carPriceDetails: UILabel!
     @IBOutlet weak var carDealerContact: UIButton!
     
+    @IBAction func CallDealer(_ sender: Any) {
+        callDelegate?.didTappedDealerContact(self.listing?.dealer?.phone)
+    }
+    
+    var callDelegate: CarCellDelegate?
+    var listing: CarListing?
+    
     // MARK: Methods
     func updateCellWith(_ listing: CarListing) {
-        
+        self.listing = listing
         self.carModelDetails.text = getCarModelDetails(listing)
         self.carPriceDetails.attributedText = getCarPriceDetails(listing)
         self.carDealerContact.setTitle(listing.dealer?.phone, for: .normal)
@@ -118,4 +125,8 @@ extension NSMutableAttributedString {
         self.append(NSAttributedString(string: value, attributes:attributes))
         return self
     }
+}
+
+protocol CarCellDelegate {
+    func didTappedDealerContact(_ contact: String?)
 }
