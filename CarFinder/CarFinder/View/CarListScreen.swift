@@ -22,6 +22,19 @@ class CarListScreen: UITableViewController {
             self?.tableView.reloadData()
         }
     }
+    
+    private func presentActionSheetToCallDealer(_ contact: String) {
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let callAction = UIAlertAction(title: "Call " + contact, style: .default, handler: { _ in
+            if let url = URL(string: "tel://" + contact) {
+                UIApplication.shared.open(url)
+            }
+        })
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        actionSheet.addAction(callAction)
+        actionSheet.addAction(cancelAction)
+        self.present(actionSheet, animated: true, completion: nil)
+    }
 }
 
 // MARK: - TableView
@@ -43,8 +56,6 @@ extension CarListScreen {
 extension CarListScreen: CarCellDelegate {
     func didTappedDealerContact(_ contact: String?) {
         guard let contact = contact else { return }
-        if let url = URL(string: "tel://" + contact) {
-            UIApplication.shared.open(url)
-        }
+        presentActionSheetToCallDealer(contact)
     }
 }
